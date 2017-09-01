@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let myData of data">
+        <div class="card">
+          <img src={{myData.image}} class="movie-img img-responsive" alt="Cinque Terre">
+          <a ng-href="http://www.gravatar.com/avatar/" class="link" title={{myData.name}}>{{myData.name}}</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Release Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let myData of data">
+          <td>{{myData.name}}</td>
+          <td><img width="25" src={{myData.image}} alt="img" /></td>
+          <td>{{myData.release_date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
